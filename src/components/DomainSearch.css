@@ -1,18 +1,17 @@
 /* DomainSearch.css */
 
-/* Full height body, center container */
+/* Center container in viewport */
 body {
   min-height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
   background: linear-gradient(to right, #f0f4ff, #d9e6ff);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  transition: background 0.5s ease;
 }
 
-/* Container styling */
+/* Card container */
 .container {
   width: 90%;
   max-width: 600px;
@@ -72,7 +71,6 @@ button:hover {
   margin-top: 25px;
   font-size: 18px;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 /* Suggestions */
@@ -97,20 +95,17 @@ button:hover {
   100% { opacity: 1; transform: translateY(0);}
 }
 
-/* Responsive for mobile */
+/* Responsive */
 @media (max-width: 500px) {
   input {
     width: 90%;
   }
-
   .container {
     padding: 30px 20px;
   }
-
   h2 {
     font-size: 24px;
   }
-
   button {
     width: 80%;
     padding: 12px 0;

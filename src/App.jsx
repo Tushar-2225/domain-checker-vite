@@ -2,7 +2,7 @@ import DomainSearch from "./components/DomainSearch";
 
 function App() {
   return (
-    <div>
+    <div style={{ height: "100vh", width: "100vw" }}>
       <DomainSearch />
     </div>
   );
