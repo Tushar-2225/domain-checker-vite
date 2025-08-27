@@ -1,33 +1,57 @@
 /* DomainSearch.css */
 
-.container {
-  max-width: 500px;
-  margin: 80px auto;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  text-align: center;
+/* Full height body, center container */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: linear-gradient(to right, #f0f4ff, #d9e6ff);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.5s ease;
 }
 
+/* Container styling */
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 50px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
 h2 {
   margin-bottom: 25px;
   color: #0070f3;
   font-size: 28px;
+  animation: slideDown 0.8s ease forwards;
 }
 
+/* Input */
 input {
-  padding: 12px;
-  width: 70%;
+  padding: 14px;
+  width: 75%;
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
   font-size: 16px;
+  transition: all 0.3s ease;
 }
 
+input:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 8px rgba(0, 112, 243, 0.3);
+}
+
+/* Button */
 button {
-  padding: 12px 25px;
+  padding: 14px 30px;
   border-radius: 8px;
   border: none;
   background-color: #0070f3;
@@ -35,21 +59,25 @@ button {
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background-color: #005bb5;
+  transform: translateY(-2px);
 }
 
+/* Result */
 .result {
   margin-top: 25px;
   font-size: 18px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
+/* Suggestions */
 .suggestions {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 16px;
   text-align: left;
 }
@@ -58,6 +86,33 @@ button:hover {
   padding-left: 20px;
 }
 
-body {
-  background: linear-gradient(to right, #f0f4ff, #d9e6ff);
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive for mobile */
+@media (max-width: 500px) {
+  input {
+    width: 90%;
+  }
+
+  .container {
+    padding: 30px 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  button {
+    width: 80%;
+    padding: 12px 0;
+  }
 }
