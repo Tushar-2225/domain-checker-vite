@@ -9,19 +9,18 @@ function DomainSearch() {
     if (domain.trim() === "") {
       setResult("❌ Please enter a domain");
       setSuggestions([]);
-    } else if (domain.endsWith(".com")) {
-      setResult(`✅ ${domain} is available!`);
+    } else {
+      // Simulate availability (optional: keep .com logic)
+      const available = domain.endsWith(".com");
+      setResult(available ? `✅ ${domain} is available!` : `❌ ${domain} is not available`);
 
-      // Simple AI-style domain suggestions
+      // Show AI-style suggestions for any domain input
       const aiSuggestions = [
         `${domain}Online.com`,
         `${domain}Hub.com`,
         `My${domain}.com`,
       ];
       setSuggestions(aiSuggestions);
-    } else {
-      setResult(`❌ ${domain} is not available`);
-      setSuggestions([]);
     }
   };
 
