@@ -31,7 +31,7 @@ Open http://localhost:5173 in your browser.
 
 🚢 Deployment
 Deployed on GitHub Pages:
-https://github.com/Tushar-2225/domain-checker-vite
+https://Tushar-2225.github.io/domain-checker-vite
 
 👨‍💻 Author
 Tushar Pandey
