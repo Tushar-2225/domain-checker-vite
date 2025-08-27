@@ -2,7 +2,15 @@ import DomainSearch from "./components/DomainSearch";
 
 function App() {
   return (
-    <div style={{ height: "100vh", width: "100vw" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh", // full screen height
+        background: "linear-gradient(135deg, #667eea, #764ba2)",
+      }}
+    >
       <DomainSearch />
     </div>
   );
